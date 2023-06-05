@@ -14,7 +14,3 @@ describe('paths', () => {
     expect(ruta).toBeUndefined(); // Verifica si se devuelve undefined
   });
 });
-
-it('should...', () => {
-  console.log('FIX ME!');
-});

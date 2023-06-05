@@ -5,7 +5,8 @@
     "node": ">=16.x"
   },
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test2": "jest --coverage"
   },
   "devDependencies": {
     "eslint": "^8.41.0",
