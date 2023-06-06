@@ -14,8 +14,8 @@ const paths = (route) => {
   }
   return undefined;
 };
-// const ruta = paths('README.md');
-// console.log(ruta);
+//const ruta = paths('README.md');
+ //console.log(ruta);
 module.exports = {
   paths,
 };

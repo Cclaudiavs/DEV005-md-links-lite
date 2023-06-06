@@ -11,7 +11,7 @@ const readFile = (route) => new Promise((resolve, reject) => {
       reject(error);
     } else {
       resolve(data);
-      //console.log(data)
+      // console.log(data)
     }
   });
 });
@@ -21,9 +21,11 @@ const ruta = paths('./README.md');
 readFile(ruta)
   .then((fileContent) => {
     console.log('Contenido del archivo:', fileContent);
+    return fileContent;
   })
   .catch((error) => {
     console.log('Error al leer el archivo', error);
+    return error;
   });
 
 module.exports = {

@@ -30,6 +30,7 @@ extractLinks(ruta)
   })
   .then((validatedLinks) => {
     console.log('Enlaces validados:', validatedLinks);
+    return validatedLinks;
   })
   .catch((error) => {
     console.log('Error al extraer o validar los enlaces:', error);

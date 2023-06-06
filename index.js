@@ -21,7 +21,7 @@ function mdLinks(filePath, options = {}) {
                 .then((validatedLinks) => resolve(validatedLinks))
                 .catch((error) => reject(error));
             } else {
-              // resolve(links);
+              resolve(links);
             }
           })
           .catch((error) => reject(error));

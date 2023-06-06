@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const ruta = './README.md';
 const extractLinks = (pathFile) => new Promise((resolve, reject) => {
   fs.readFile(pathFile, 'utf8', (error, fileContent) => {
     if (error) {
@@ -20,8 +19,8 @@ const extractLinks = (pathFile) => new Promise((resolve, reject) => {
     }
   });
 });
-
-extractLinks(ruta)
+/* const ruta = './README.md';
+   extractLinks(ruta)
   .then((links) => {
     if (Array.isArray(links) && links.length > 0) {
       // console.log('Contenido de links:', links);
@@ -31,7 +30,7 @@ extractLinks(ruta)
   })
   .catch((error) => {
     console.log('Error al extraer los links:', error);
-  });
+  }); */
 
 module.exports = {
   extractLinks,
