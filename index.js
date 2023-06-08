@@ -16,12 +16,16 @@ function mdLinks(filePath, options = {}) {
       .then((fileContent) => {
         extractLinks(fileContent, absolutePath)
           .then((links) => {
-            if (options.validate) {
-              validateLinks(links)
-                .then((validatedLinks) => resolve(validatedLinks))
-                .catch((error) => reject(error));
+            if (Array.isArray(links) && links.length > 0) {
+              // console.log('Cont links:', links);
+              if (options.validate) {
+                validateLinks(links)
+                  .then((validatedLinks) => resolve(validatedLinks));
+              } else {
+                resolve(links);
+              }
             } else {
-              resolve(links);
+              resolve('No se encontraron enlaces en el archivo.');
             }
           })
           .catch((error) => reject(error));
@@ -29,6 +33,14 @@ function mdLinks(filePath, options = {}) {
       .catch((error) => reject(error));
   });
 }
+// Llamar a la función mdLinks
+mdLinks('./README.md', { validate: true })
+  .then((links) => {
+    console.log(links);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 module.exports = {
   mdLinks,

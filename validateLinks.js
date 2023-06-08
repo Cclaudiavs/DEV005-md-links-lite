@@ -1,5 +1,4 @@
 const axios = require('axios');
-const { extractLinks } = require('./extractLinks');
 
 const validateLinks = (links) => {
   const linksPromise = links.map((link) => axios
@@ -18,7 +17,7 @@ const validateLinks = (links) => {
   return Promise.all(linksPromise);
 };
 
-const ruta = './README.md';
+/*const ruta = './README.md';
 
 extractLinks(ruta)
   .then((links) => {
@@ -29,12 +28,13 @@ extractLinks(ruta)
     return [];
   })
   .then((validatedLinks) => {
-    console.log('Enlaces validados:', validatedLinks);
+    //console.log('Enlaces validados:', validatedLinks);
     return validatedLinks;
   })
   .catch((error) => {
     console.log('Error al extraer o validar los enlaces:', error);
-  });
+    return error;
+  });*/
 module.exports = {
   validateLinks,
 };

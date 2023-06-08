@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { paths } = require('./paths');
 /* es una promesa que:
 lee el archivo devuelve el contenido
  */
@@ -17,7 +16,7 @@ const readFile = (route) => new Promise((resolve, reject) => {
 });
 // consume la promesa, si hay error en la lectura retorna catch
 // si la promesa se cumple devuelve .then
-const ruta = paths('./README.md');
+/* const ruta = paths('./README.md');
 readFile(ruta)
   .then((fileContent) => {
     console.log('Contenido del archivo:', fileContent);
@@ -26,7 +25,7 @@ readFile(ruta)
   .catch((error) => {
     console.log('Error al leer el archivo', error);
     return error;
-  });
+  }); */
 
 module.exports = {
   readFile,

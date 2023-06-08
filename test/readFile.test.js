@@ -11,4 +11,12 @@ describe('readFile', () => {
       expect(fileContent).toBeDefined();
     });
   });
+  it('debe devolver error si no se cumple la promesa', () => {
+    const ruta = './jajaj.md';
+
+    return readFile(ruta).catch((error) => {
+      expect(error).toBeDefined();
+      console.log('Error al leer el archivo', error);
+    });
+  });
 });
