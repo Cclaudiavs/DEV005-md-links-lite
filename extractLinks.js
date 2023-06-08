@@ -11,7 +11,7 @@ const extractLinks = (fileContent, pathFile) => new Promise((resolve, reject) =>
   }));
   if (links.length > 0) {
     resolve(links);
-    //console.log('enlaces encontrados', links);
+    // console.log('enlaces encontrados', links);
   } else {
     reject(new Error('No se encontraron enlaces en el archivo.'));
   }

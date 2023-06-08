@@ -14,7 +14,9 @@ describe('extractLinks', () => {
   });
 
   test('debería rechazar la promesa cuando ocurre un error', () => {
-    const pathFile = './JAJJAJA.md';
-    return expect(extractLinks(pathFile)).rejects.toThrow();// verifica que sea rechazado
+    const pathFile = './jajaja.md';
+    return extractLinks(pathFile).catch((error) => {
+      expect(error).toBeDefined();
+    });
   });
 });

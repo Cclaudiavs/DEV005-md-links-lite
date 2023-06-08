@@ -17,7 +17,7 @@ const validateLinks = (links) => {
   return Promise.all(linksPromise);
 };
 
-/*const ruta = './README.md';
+/* const ruta = './README.md';
 
 extractLinks(ruta)
   .then((links) => {
@@ -34,7 +34,7 @@ extractLinks(ruta)
   .catch((error) => {
     console.log('Error al extraer o validar los enlaces:', error);
     return error;
-  });*/
+  }); */
 module.exports = {
   validateLinks,
 };
