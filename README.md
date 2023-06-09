@@ -1,6 +1,9 @@
+# Markdown Links
+
 1. ¿Que es Md-Links?
 
 Markdown Links es una librería de Node.js que nos permite buscar en un directorio todos los archivos en formato Markdown que en su interior contengan link y asi poder validar el estado actual de cada uno de ellos. (En este proyecto en particula se dedica a leer un archivo.)
+
 2. Diagrama de Flujo :creately.com
 
 https://drive.google.com/drive/recent
@@ -8,6 +11,7 @@ https://drive.google.com/drive/recent
 
 Para instalar la librería debes correr el siguiente comando:
 npm install --global <github-Cclaudiavs>/md-links
+  
 4. Herramientas Utilizadas :
 
 La librería contiene las siguientes dependencias:
@@ -17,8 +21,9 @@ La librería contiene las siguientes dependencias:
     Node-fetch
     Axios
 
-mdLinks('path', {options});
-5. Argumentos:
+
+  
+5. Argumentos: mdLinks('path', {options});
 
     path: El archivo .md
     options: Recibe un objeto con dos propiedades, "validate" y "stats".
@@ -32,7 +37,7 @@ La librería te ofrece la siguiente información:
 
 
 
-# Markdown Links
+
 
 ## Índice
 
