@@ -5,6 +5,7 @@ const extractLinks = (fileContent, pathFile) => new Promise((resolve, reject) =>
   const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gm;
   // array nuevo que guarda las coincidencias de regex
   const links = Array.from(fileContent.matchAll(regex), (match) => ({
+    // busca todas las conicidencias en el archivo
     href: match[2],
     text: match[1],
     file: path.resolve(pathFile),

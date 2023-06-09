@@ -8,14 +8,12 @@ const paths = (route) => {
       console.log('Ruta encontrada:', route);
       return route;
     }
-    const absolutePath = path.resolve(route);
+    const absolutePath = path.resolve(route);// convierte en abs y guarda en variable
     console.log('Ruta Absoluta:', absolutePath);
     return absolutePath;
   }
   return undefined;
 };
-// const ruta = paths('README.md');
-// console.log(ruta);
 module.exports = {
   paths,
 };
