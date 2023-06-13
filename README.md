@@ -22,6 +22,7 @@ La librería contiene las siguientes dependencias:
 4. Argumentos: mdLinks('path', {options});
 
     path: El archivo .md
+   
     options: Recibe un objeto propiedades, "validate".
 
 La librería te ofrece la siguiente información:
